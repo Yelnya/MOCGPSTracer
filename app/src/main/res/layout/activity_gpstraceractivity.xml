@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".GPSTracerAcitvity">
+
+    <Button
+        android:id="@+id/buttonGetLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showLoc"
+        android:layout_marginTop="10dp"
+        android:text="Start Capturing"
+        android:layout_centerHorizontal="true" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetLatOld"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:text="Network Latitude Old:  " />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetLngOld"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignLeft="@+id/textViewNetLatOld"-->
+        <!--android:layout_below="@+id/textViewNetLatOld"-->
+        <!--android:text="Network Longitude Old:  "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetTmstmpOld"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignLeft="@+id/textViewNetLatOld"-->
+        <!--android:layout_below="@+id/textViewNetLngOld"-->
+        <!--android:text="Network Timestamp Old:  "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetLatNew"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/textViewNetTmstmpOld"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:text="Network Latitude New: "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetLngNew"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignLeft="@+id/textViewNetLatNew"-->
+        <!--android:layout_below="@+id/textViewNetLatNew"-->
+        <!--android:text="Network Longitude New:  "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetTmstmpNew"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignLeft="@+id/textViewNetLatNew"-->
+        <!--android:layout_below="@+id/textViewNetLngNew"-->
+        <!--android:text="Network Timestamp New:  "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetDist"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignLeft="@+id/textViewNetLngNew"-->
+        <!--android:layout_below="@+id/textViewNetTmstmpNew"-->
+        <!--android:text="Network Distance Old -> New:  "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewNetSpeed"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_alignLeft="@+id/textViewNetLngNew"-->
+        <!--android:layout_below="@+id/textViewNetDist"-->
+        <!--android:text="Network Speed Old -> New:  "-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+    <TextView
+        android:id="@+id/textViewGpsLatOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Latitude Old:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/buttonGetLoc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsLngOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Longitude Old:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsLatOld"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsTmstmpOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Timestamp Old:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsLngOld"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsLatNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Latitude New:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsTmstmpOld"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsLngNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Longitude New:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsLatNew"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsTmstmpNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Timestamp New:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsLngNew"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsDist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Longitude New:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsTmstmpNew"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewGpsSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Speed Old -> New:  "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewGpsDist"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Route"
+        android:id="@+id/btnStopSave"
+        android:layout_alignParentBottom="true"
+        android:onClick="stopSave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>
